@@ -1,0 +1,5 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$    /main.php?category=$1&product_line=$2&product=$3&final_product=$4  [NC,L]  # Handle product requests
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$    /main.php?category=$1&product_line=$2&product=$3  [NC,L]  # Handle product requests
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$    /main.php?category=$1&product_line=$2  [NC,L]  # Handle product requests
+RewriteRule ^([a-zA-Z0-9-]+)/?$    /main.php?category=$1  [NC,L]  # Handle product requests
